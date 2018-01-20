@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+nav a {
+  text-decoration: none;
+  color:white;
+}
+
+header span nav:nth-of-type(1) {
+  text-align: right;
+  padding: 0 0 20px 0;
+}
+
+nav:nth-of-type(1) a {
+  padding:5px;
+}
+
+header input {
+  padding: 20px;
+  display: inline-block;
+  width: 75%;
+  margin: 0px auto;
+}
+
+main > section > section {
+  display: block;
+}
+main img {
+  width:auto;
+  max-width: 100%;
+}
+main > section > section > section:nth-of-type(1) {
+  display:inline-block;
+  width:30%;
+}
+/* [3] inline-block layout */
+section > section > section ~ section {
+  display:inline-block;
+  width:70%;
+  vertical-align: top;
+}
+main > section > section > section figure:nth-of-type(2) img {
+  max-width: calc(33% - 6px);
+  padding: 3px;
+}
+.App > nav:nth-of-type(1) {
+  margin:0 auto;
+  display: block;
+
+}
+
+.App > nav:nth-of-type(1) span {
+  display: inline-block;
+  width: 20%;
+}
+
+
+.App > nav:nth-of-type(1) a {
+  padding:20px 0;
+  background: grey;
+  display: inline-block;
+  /* margin-left: -4px; */
+  width:100%;
+  text-align: center;
+  text-transform: capitalize;
+}
+.App > nav:nth-of-type(1) a:hover {
+  background: #333;
+}
+
+
+.App > nav:nth-of-type(1) a.active {
+  background: #3f51b5;
+}
+nav span nav {
+  display:  none;
+  position:  absolute;
+  width: 20%;
+}
+.App > nav:nth-of-type(1) a:hover + nav,
+.App > nav:nth-of-type(1) a:focus + nav,
+nav span nav:focus,
+nav span nav:hover {
+  display: block;
+  animation: fadeIn 0.5s 1;
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

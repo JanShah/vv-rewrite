@@ -1,0 +1,9 @@
+.Home figure {
+	width:calc(25% - 20px);
+	display: inline-block;
+	margin:10px;
+}
+
+.Home figcaption {
+	min-height: 30px;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "vvv",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "references":[
+    "https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf",
+    "https://reacttraining.com/react-router/web/api/Route/render-func",
+    "http://learnlayout.com/inline-block-layout.html",
+    "https://reacttraining.com/react-router/web/example/custom-link"
+  ]
+}
