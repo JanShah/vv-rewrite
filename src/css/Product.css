@@ -9,7 +9,11 @@
 	width:calc(100% - 220px);
 	margin:0;
 }
-
+.Product figure {
+	display: inline-block;
+	width:200px;
+	vertical-align: top;
+}
 .Product > h2,
 .Product > p::first-letter {
 	text-transform: capitalize;
@@ -25,4 +29,8 @@
 	width:220px;
 	vertical-align: top;
 	margin-top:-2em;
+}
+
+.Product > section {
+  display: inline-block;
 }

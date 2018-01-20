@@ -1,9 +1,40 @@
+.Home {
+  max-width: 1200px;
+  margin: 0 auto;
+	color:white;
+}
+.Home > section {
+	background: rgb(51, 102, 150);
+}
+
+.Home span {
+	display: block;
+	padding: 20px;
+	background: #333;
+}
 .Home figure {
-	width:calc(25% - 20px);
-	display: inline-block;
-	margin:10px;
+  width: calc(25% - 20px);
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid #607D8B;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 10px;
+  vertical-align: top;
+	background: white;
+	transition: all .3s;
 }
 
 .Home figcaption {
-	min-height: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 10px;
+  background: #fda405;
+  color: #333333;
+  font-weight: bold;
+}
+
+.Home figure:hover {
+	box-shadow: 4px 3px 6px rgba(34, 34, 34, 0.49);
+
 }

@@ -124,7 +124,7 @@ const products = {
 				"category":"dresses",
 				"description":"The romance of the early renaissance is captured in this courtly gown. The Anjou Gown has rich brocades, lavish trims, period rounded shoulders, and an elegant lace up back, all adding to the overall beauty of this piece. The Anjou Gown is to be worn with our period farthingale ",
 				"additional":["Rich Brocades","Lavish Trims","Made Of 100% Cotton","Dry Clean Only"],
-				"images":["img/dress/dress1.png","img/dress/dress2.png","img/dress/dress3.png"],
+				"images":["img/dress/dress3.jpg","img/dress/dress2.jpg","img/dress/dress1.jpg"],
 				"sizes": [0,1,2],
 				"colours":[0,1,3,6],
 				"price": "229.99"	
@@ -167,4 +167,9 @@ export const individualItem=(props)=>{
 export const firstImage = props=>{
 	const product = catalogProducts(props.cat).filter(item=>props.name===item.name)[0]
 	return product.images[0]
+}
+
+export const randomImage = props=>{
+	const product = catalogProducts(props.cat).filter(item=>props.name===item.name)[0]
+	return product.images[Math.floor(Math.random()*product.images.length)]
 }
