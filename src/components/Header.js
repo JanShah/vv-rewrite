@@ -6,9 +6,9 @@ import '../css/Header.css'
 
 export default class Header extends Component  {
   render() {
-    return <header className="App-header">
+    return <header>
 			<span>
-				<Link to="/"> <img src={logo} className="App-logo" alt="logo" /></Link>
+				<Link to="/"> <img src={logo} className="App-logo" alt="valiants vintage vestures" /></Link>
 				<h1 className="App-title">Welcome to React</h1>
 			</span>
 			<RightSection />

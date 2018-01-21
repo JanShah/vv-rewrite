@@ -1,0 +1,24 @@
+.Category figure,
+.Category p {
+	display: inline-block;
+}
+
+.Category figure {
+	width:30%;
+	margin:0;
+}
+
+.Category p {
+	width: 70%;
+	vertical-align: top;
+}
+
+.Category figcaption {
+	text-align: center;
+	font-size: 1.2em;
+}
+
+.Category div {
+  display: inline-block;
+  width: 50%;
+}

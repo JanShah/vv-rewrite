@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import React from 'react';
 import {Products} from '../components/Product'
 import {Pages} from '../components/Pages'
@@ -11,43 +11,48 @@ const RoutedProduct = ({component: Component, name,...rest}) =>(
   <Route {...rest} render={props=><Component name={name} rest={rest}/>}/>
 )
 
-export const Routes =()=>{
-	const pro = allProducts()
-	return <main>
-		<RoutedProduct 
-			exact path={'/'} 
-			name={'Home'} 
-			item={'Home'} 
-			component={Home} />
-	<Switch>
-		{Object.keys(pro).map((cat,index)=>{
-			return pro[cat].map((item,id)=>{
-				return <RoutedProduct 
-					key={index} 
-					path={'/'+cat+'/'+item}
-					component={Item}
-					category={cat}
-					name={item}
-					/>
-				})
-			}
-		)}
-	</Switch>
-  {categories.map((category,index)=>
-		<RoutedProduct 
-			key={index} 
-			exact path={'/'+category} 
-			name={category} 
-			item={category} 
-			component={Products} />
-  )}
-  {navigation.map((page,index)=>
-		<RoutedProduct 
-			key={index} 
-			exact path={'/'+page} 
-			name={page} 
-			component={Pages} 
-			item={page}/>
-  )} 
-</main>
+const allPaths = ()=>{
+	const paths = [{
+		path:'/',
+		name:'Home',
+		component:Home, 
+		item:'Home'
+	}]
+	categories.forEach(category=>{
+		paths.push({
+			path: '/'+category,
+			name:category,
+			item:category,
+			component:Products
+		})
+		allProducts()[category].forEach(item=>
+		paths.push({
+			path:'/'+category+'/'+item,
+			component: Item,
+			category:category,
+			name:item
+		}))
+	})
+	navigation.forEach(page=>
+		paths.push({
+			path:'/'+page,
+			name:page,
+			component:Pages, 
+			item:page
+		})
+  )
+	return paths
 }
+
+export const Routes =()=><main>
+	{allPaths().map((route,index)=>
+	<RoutedProduct 
+		key={index}
+		exact path={route.path} 
+		name={route.name} 
+		item={route.item} 
+		component={route.component} 
+		category={route.category||''}
+		/>
+	)}
+</main>

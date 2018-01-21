@@ -3,15 +3,16 @@ import Header from './components/Header'
 import './App.css';
 import { Routes } from './routes'
 import {ProductMenu} from './components/ProductMenu'
-
-const MainRoutes =()=><Routes />
+import {Breadcrumb} from './components/Breadcrumb'
 
 const App=()=> {
+  // console.log(Breadcrumb())
   return (
   <div className="App">
     <Header />
+    <Breadcrumb />
     <ProductMenu />
-    <MainRoutes />
+    <Routes />
   </div>
   );
 }

@@ -1,18 +1,30 @@
-header fieldset {
+.SearchBox {
 	border:none;
 	margin:0;
 	padding:0;
-}
-header fieldset {
 	display:  inline-block;
 	width: calc(100% - 100px);
+	vertical-align: top;
 }
-header fieldset label {
+.SearchBox label {
   position:  absolute;
   left:  -1000%;
 }
 
-header fieldset legend {
+.SearchBox legend {
   position:  absolute;
   left: -1000%;
+}
+
+.SearchBox input {
+  padding: 20px;
+  display: inline-block;
+  width: 75%;
+	margin: 0px auto;
+	font-size: 2em;
+	border:none;
+}
+
+.SearchBox input[type=text]:focus {
+	outline: none;
 }

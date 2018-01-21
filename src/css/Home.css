@@ -1,7 +1,8 @@
 .Home {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
-	color:white;
+  color:white;
+  padding: 0;
 }
 .Home > section {
 	background: rgb(51, 102, 150);
@@ -29,7 +30,7 @@
   height: 30px;
   text-align: center;
   padding: 10px;
-  background: #fda405;
+  background: #E0E0E0;
   color: #333333;
   font-weight: bold;
 }

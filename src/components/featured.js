@@ -1,5 +1,5 @@
 import React from 'react'
-import {categories, allProducts, firstImage,randomImage} from '../data'
+import {categories, allProducts,randomImage} from '../data'
 import {Link} from 'react-router-dom'
 import {Gallery} from './Gallery'
 

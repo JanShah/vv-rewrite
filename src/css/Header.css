@@ -1,15 +1,19 @@
+header {
+  /* background-color: #222; */
+  height: 130px;
+  padding: 20px;
+  color: white;
+  background: linear-gradient(#333, #ccc);
+}
+
 header > span:first-child {
   display: inline-block;
   width:150px;
 }
 
-header > span:nth-of-type(2) {
+header > span:last-child {
   display: inline-block;
   width: calc(100% - 154px);
   text-align: center;
   vertical-align: top;
-}
-
-header input[type=text]:focus {
-	outline: 1px solid #777;
 }

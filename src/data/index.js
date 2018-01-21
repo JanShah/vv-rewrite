@@ -1,3 +1,5 @@
+export const storeDescription = 'VVV is the premiere destination for all those seeking vintage and early period clothing and costumes of the highest quality. We always aim to provide garments that are accurate reproductions of bygone days and employ the best artisans and historians to do just that. Our range includes Tunics, Breeches, Cloaks and much more! Feel free to browse, ask any questions or visit and comment on our blog'
+
 const products = {	
 	"shirts":{
 		"id":0,
@@ -133,18 +135,71 @@ const products = {
 	}
 }
 
+
+const citations ={ 
+	v:{	
+		cite:'V (V for Vendetta)',
+		link:'',
+		quote:'Voila! In view, a humble vaudevillian veteran, cast vicariously as both victim and villain by the vicissitudes of Fate. This visage, no mere veneer of vanity, is a vestige of the vox populi, now vacant, vanished. However, this valorous visitation of a by-gone vexation, stands vivified and has vowed to vanquish these venal and virulent vermin vanguarding vice and vouchsafing the violently vicious and voracious violation of volition... '
+	},
+	surnamedb:{
+		cite:'surnamedb.com',
+		link:'http://www.surnamedb.com/Surname/Valiant#ixzz51owQsiKy',
+		quote:' Recorded in some twenty spellings, many quite rare and including Valera, Valero (Italian), Valere, Valeri (French), Valero (Spanish) and Valiant (English). It may also be a "Crusader" name. That was a name that was originally associated in someway with the famous Crusades to the Holy Land in the 12th century. Many soldiers and pilgrims returning from these Crusades gave their children names associated with the bible and early Christian martyrs '
+
+	},
+	curry:{
+		cite:'Debabrata Mukherjee - The History and Heritage Accommodation Guide',
+		link:'http://www.historic-uk.com/CultureUK/The-British-Curry/',
+		quote:'If Britain taught India how to play cricket, India perhaps returned the favour by teaching the British how to enjoy a hot Indian curry. By the 18th century, East India Company men (popularly called ‘nabobs’, an English corruption of the Indian word ‘nawab’ meaning governors or viceroys) returning home wanted to recreate a slice of their time spent in India. Those who couldn’t afford to bring back their Indian cooks satisfied their appetite at coffee houses. As early as 1733, curry was served in the Norris Street Coffee House in Haymarket. By 1784, curry and rice had become specialties in some popular restaurants in the area around London’s Piccadilly.'
+	},
+	thlor:{
+		cite:'Thlor, Son of Odeon',
+		quote:'great tunics, perfect for my size and quick delivery'
+	},
+	snipe:{
+		cite:'Snipe Digg',
+		quote: 'These homies sell the dopest vintage rags, highly recommended'
+	},
+	mary:{	
+		cite:'Mary Pipes',
+		quote:'vvv provided a great service, fast delivery and when I had an issue, the staff were extremely friendly and very helpful!'
+	}
+}
+
+export const reviews = [
+	citations.mary,
+	citations.snipe,
+	citations.thlor	
+]
+
+export const blogs = [
+	{
+		date:12,
+		title: 'The British Curry.',
+		description: ' For all the foodies out there, some interesting info about our long and interesting relationship with Curries :)',
+		content:citations.curry
+	},
+	{
+		date:13,
+		title:'Valiant is an interesting name',
+		description:'What"s more surpising, is the origin of it. These excerpts from surnamedb should pique your interest.',
+		content: citations.surnamedb
+	}
+]
+
+
 export const catalogProducts = category=>products[category].inventory;
 
 export const categories = Object.keys(products)
 
 export const category=(cat)=>{
-	const {name,short_description,image} = products[cat]
-	const description = short_description
-	return {name,description,image}
+	const {name,description,short_description,image} = products[cat]
+	return {name,description,short_description,image}
 }
 
 export const navigation=[
- 'products','about','terms','blog','contact'
+ 'categories','about','terms','blog','contact'
 ]
 
 export const allProducts =(category)=>{
@@ -173,3 +228,6 @@ export const randomImage = props=>{
 	const product = catalogProducts(props.cat).filter(item=>props.name===item.name)[0]
 	return product.images[Math.floor(Math.random()*product.images.length)]
 }
+export const svgStyle= {fill:'#FFFFFF',stroke:'#000000',strokeWidth:'2',strokeLinecap:'round',strokeLinejoin:'round',strokeMiterlimit:'10',}
+export const chevron = '4.5,3.7 10.5,8.7 4.5,13.7'
+// export const shirt = `17.6,7.1 17.3,2.8 15.5,3.6 13.4,3 9.9,6.1 12.8,6.3 13.4,3 9.9,6.1 9.8,13.1 9.7,6.1 6.2,3 9.7,6.1 6.7,6.2 6.2,3 4,3.6 2.3,2.8 1.9,7.1 4.6,8.2 5.4,16.8 14.2,16.8 14.9,8.2`

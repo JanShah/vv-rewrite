@@ -1,6 +1,5 @@
 import React from 'react'
 import {catalogProducts,category} from '../data/'
-import ProductInfo from './ProductInfo'
 import '../css/Product.css'
 import Helmet from 'react-helmet'
 import {Gallery} from './Gallery'
@@ -13,10 +12,8 @@ export const Products = props=>{
 	return <section className="Product">
 		<Helmet>
 			<title>{props.name} | VVV</title>
-		</Helmet>
-	
+		</Helmet>	
 		<h2>{props.name}</h2>
-
 		<p>{catDescription.description}</p>
 		<img src={'/'+catDescription.image} alt={props.name} />
 		<section>

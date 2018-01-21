@@ -1,0 +1,9 @@
+.Reviews {
+  padding: 20px;
+}
+
+.Reviews cite {
+  font-weight:bold;
+  padding:10px 0;
+  display:block;
+}

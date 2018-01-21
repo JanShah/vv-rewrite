@@ -1,0 +1,59 @@
+.ProductMenu {
+	display: inline-block;
+	width:20%;
+}
+
+.ProductMenu nav {
+  margin: 0 auto;
+  /* display: block; */
+
+}
+
+.ProductMenu nav a {
+  padding:10px 5px;
+  background: grey;
+  display: inline-block;
+  width:calc(100% - 10px);
+  text-align: center;
+	text-transform: capitalize;
+	transition: all 0.3s;	
+}
+
+.ProductMenu nav a:hover {
+  background: #333;
+}
+
+.ProductMenu nav a.active {
+  background: #3f51b5;
+}
+.ProductMenu nav span nav {
+  position: absolute;
+  width: 20%;
+  left: -1000%;
+  /* height: 200px; */
+  padding: 10px;
+  background: grey;
+}
+
+.ProductMenu nav span nav a {
+	padding: 5px 0;
+	width: 100%;
+}
+
+.ProductMenu nav a:hover + nav,
+.ProductMenu nav a:focus + nav,
+nav span nav:focus,
+nav span nav:hover {
+	display: inline-block;
+	left:20%;
+	animation: fadeIn 0.5s 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

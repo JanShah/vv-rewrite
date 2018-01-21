@@ -1,7 +1,7 @@
 import React from 'react';
 import {Route,Link} from 'react-router-dom'
 import {categories,allProducts} from '../data/'
-
+import '../css/ProductMenu.css'
 const SubNav=(props)=>{
 	const items = allProducts(props.cat)
 	return <nav>
@@ -15,16 +15,19 @@ const SubNav=(props)=>{
 		</nav>
 }
 
-export const ProductMenu =()=>{
-	return (
-	<nav> 		
-		{categories.map((category,index)=><span key={index} >
-		<MenuLink activeOnlyWhenExact={true} to={'/'+category} label={category}/>
+export const ProductMenu =()=>(
+<div className="ProductMenu">
+	<nav> 			
+		{categories.map((category,index)=>(
+		<span key={index} >
+			<MenuLink activeOnlyWhenExact={true} to={'/'+category} label={category}/>
 			<SubNav cat={category}/>
-			</span>
+		</span>
+		)
 		)}
 	</nav>
-)}
+</div>
+)
 // [4] active link
 const MenuLink = ({ label, to, activeOnlyWhenExact }) => (
   <Route path={to} exact={activeOnlyWhenExact} children={({ match }) => (
