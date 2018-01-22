@@ -1,21 +1,21 @@
 import React from 'react'
 import {categories, allProducts,randomImage} from '../data'
 import {Link} from 'react-router-dom'
-import {Gallery} from './Gallery'
+import {Gallery} from '../functions/Gallery'
 
 export const featured = ()=>{
 	const list = allProducts()
 	const imageList = []
 	for(let category of categories) {
 		for(let item of list[category]) {
-			item = item.split('-').join(' ')
-			const image = randomImage({cat:category,name:item})
-			const detail = {
-				image:image,
+			imageList.push({
+				image:randomImage({
+					cat:category,
+					name:item.split('-').join(' ')
+				}),
 				name:item,
 				category:category
-			}
-			imageList.push(detail)
+			})
 		}
 	}
 	return (qty)=>{

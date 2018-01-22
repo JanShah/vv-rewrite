@@ -2,7 +2,8 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: block;
+	display: block;
+	background: #232323;
 }
 .breadcrumbs li {
 
@@ -13,9 +14,9 @@
 .breadcrumbs  a {
 	text-transform: capitalize;
 	text-decoration: none;
-	color:#333;
+	color:rgb(255, 255, 255);
 }
 
 .breadcrumb-active a {
-	color:darkblue;
+	color:rgb(208, 255, 40);
 }

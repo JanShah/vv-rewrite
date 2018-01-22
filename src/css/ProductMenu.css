@@ -1,43 +1,89 @@
 .ProductMenu {
-	display: inline-block;
-	width:20%;
+  display: inline-block;
+  width: calc(20% - 10px);
+  margin-left: 10px;
+	margin-top: 20px;
 }
+
 
 .ProductMenu nav {
-  margin: 0 auto;
+	margin: 0 auto;
   /* display: block; */
+	min-width: 150px;
+	background: #333;
+	border-radius: 10px;
 
 }
 
+
 .ProductMenu nav a {
+	border-radius: 10px;
   padding:10px 5px;
-  background: grey;
+  /* background: grey; */
   display: inline-block;
   width:calc(100% - 10px);
   text-align: center;
 	text-transform: capitalize;
-	transition: all 0.3s;	
+	transition: all 0.5s;	
 }
 
 .ProductMenu nav a:hover {
-  background: #333;
+  background: rgb(73, 73, 73);
 }
 
+
 .ProductMenu nav a.active {
-  background: #3f51b5;
+	background: rgb(208, 255, 40);
+	color: black;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
 }
+.ProductMenu > nav > span:first-child > a.active {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+
+}
+.ProductMenu > nav > span:last-child > a.active {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.ProductMenu > nav > span:first-child > a:hover {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 0px;
+}
+.ProductMenu > nav > span:last-child > a:hover {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 0px;
+}
+
 .ProductMenu nav span nav {
   position: absolute;
   width: 20%;
-  left: -1000%;
+	left: -1000%;
+	opacity: 1;
   /* height: 200px; */
-  padding: 10px;
-  background: grey;
+  /* padding: 5px; */
+  background: #494949;
+  border-radius: 0;
+	margin-left: -10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 
 .ProductMenu nav span nav a {
-	padding: 5px 0;
-	width: 100%;
+  width: calc(100% - 10px);
+}
+
+.ProductMenu nav span nav a:hover {
+	/* background: #222; */
+}
+.ProductMenu nav span nav a:first-child {
+	border-top-right-radius: 10px;
+}
+
+.ProductMenu nav span nav a:last-child {
+	border-bottom-right-radius: 10px;
 }
 
 .ProductMenu nav a:hover + nav,
@@ -46,12 +92,13 @@ nav span nav:focus,
 nav span nav:hover {
 	display: inline-block;
 	left:20%;
-	animation: fadeIn 0.5s 1;
+	animation: fadeIn 0.4s 1;
 }
 
 @keyframes fadeIn {
   from {
-    opacity: 0;
+		left: 30%;
+		opacity:0;
   }
   to {
     opacity: 1;

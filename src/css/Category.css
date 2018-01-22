@@ -1,3 +1,7 @@
+.Category {
+	color:white;
+}
+
 .Category figure,
 .Category p {
 	display: inline-block;
