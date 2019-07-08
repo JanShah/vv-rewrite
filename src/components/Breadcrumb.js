@@ -13,7 +13,7 @@ export const Breadcrumb = props =>(
 </ul>
 )
 
-const BreadcrumbsItem = ({ ...rest, match }) =>(
+const BreadcrumbsItem = ({  match,...rest }) =>(
 <li className={match.isExact ? 'breadcrumb-active' : undefined}>
 	{Svg({points:chevron,width:20,height:15})}
 	<Link to={match.url || ''}>

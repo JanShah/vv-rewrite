@@ -22,7 +22,7 @@ export default class Carousel extends Component {
 				<img 
 					className="previous" 
 					onClick={this.changeImage.bind(this)} 
-					onMouseEnter={this.changeImage.bind(this)} 
+				
 					src={'/'+prevNext.previous}
 					alt=""/>
 				<img 
@@ -34,7 +34,7 @@ export default class Carousel extends Component {
 				<img 
 					className="next" 
 					onClick={this.changeImage.bind(this)} 
-					onMouseEnter={this.changeImage.bind(this)} 
+				
 					src={'/'+prevNext.next}
 					alt=""/>
 			</div>
