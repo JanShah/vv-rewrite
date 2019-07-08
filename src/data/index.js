@@ -228,6 +228,6 @@ export const randomImage = props=>{
 	const product = catalogProducts(props.cat).filter(item=>props.name===item.name)[0]
 	return product.images[Math.floor(Math.random()*product.images.length)]
 }
-export const svgStyle= {fill:'#FFFFFF',stroke:'#000000',strokeWidth:'2',strokeLinecap:'round',strokeLinejoin:'round',strokeMiterlimit:'10',}
+export const svgStyle= {fill:'none',stroke:'#fff',strokeWidth:'2',strokeLinecap:'round',strokeLinejoin:'round',strokeMiterlimit:'10',}
 export const chevron = '4.5,3.7 10.5,8.7 4.5,13.7'
 // export const shirt = `17.6,7.1 17.3,2.8 15.5,3.6 13.4,3 9.9,6.1 12.8,6.3 13.4,3 9.9,6.1 9.8,13.1 9.7,6.1 6.2,3 9.7,6.1 6.7,6.2 6.2,3 4,3.6 2.3,2.8 1.9,7.1 4.6,8.2 5.4,16.8 14.2,16.8 14.9,8.2`

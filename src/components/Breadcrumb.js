@@ -5,34 +5,20 @@ import {Svg} from './Svg'
 import {chevron} from '../data/'
 
 // [5]
-export const Breadcrumb = (props) => (
-	<ul className="breadcrumbs">
-		<Route path='/:path' component={Home} />
-		<Route path='/:path' component={BreadcrumbsItem} />
-		<Route path='/:path/:path' component={BreadcrumbsItem} />
-	</ul>
+export const Breadcrumb = props =>(
+<ul className="breadcrumbs">
+	<Route path='/:path' component={() =><li><Link to={'/'}>Home</Link></li>} />
+	<Route path='/:path' component={BreadcrumbsItem} />
+	<Route path='/:path/:path' component={BreadcrumbsItem} />
+</ul>
 )
 
-
-const Home = () => {
-	return (
-	<li>
-		<Link to={'/'}>Home</Link>
-	</li>
-	)
-}
-
-// const svgStyle= {fill:'#FFFFFF',stroke:'#000000',strokeWidth:'2',strokeLinecap:'round',strokeLinejoin:'round',strokeMiterlimit:'10',}
-const chev =Svg({points:chevron,width:20,height:15})
-
-const BreadcrumbsItem = ({ ...rest, match }) => {
-	return (
-	<li className={match.isExact ? 'breadcrumb-active' : undefined}>
-		{chev}
-		<Link to={match.url || ''}>
-				{match.params.path}
-		</Link>
-	</li>
-	)
-}
+const BreadcrumbsItem = ({ ...rest, match }) =>(
+<li className={match.isExact ? 'breadcrumb-active' : undefined}>
+	{Svg({points:chevron,width:20,height:15})}
+	<Link to={match.url || ''}>
+		{match.params.path}
+	</Link>
+</li>
+)
 

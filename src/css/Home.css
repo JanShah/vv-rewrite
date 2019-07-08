@@ -5,24 +5,24 @@
   padding: 0;
 }
 .Home > section {
-	background: rgb(51, 102, 150);
+	/* background: rgb(51, 102, 150); */
 }
 
 .Home span {
 	display: block;
 	padding: 20px;
-	background: #333;
+	/* background: #333; */
 }
 .Home figure {
   width: calc(25% - 20px);
   display: inline-block;
   padding: 10px;
-  border: 1px solid #607D8B;
+  /* border: 1px solid #607D8B; */
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 10px;
   vertical-align: top;
-	background: white;
+  min-width: 250px;
 	transition: all .3s;
 }
 

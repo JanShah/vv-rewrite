@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/Home.css'
-import {featured} from './featured'
+import {featured} from '../functions/featured'
 import {storeDescription as description} from '../data/'
 import {Reviews} from './Reviews'
 

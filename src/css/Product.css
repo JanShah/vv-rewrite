@@ -1,5 +1,5 @@
 .Product {
-	background: white;
+	color: white;
 	padding: 0 20px;
 }
 
@@ -7,10 +7,15 @@
 .Product > p {
 	display: inline-block;
 	padding:20px 0;
-	width:calc(100% - 220px);
+	/* width:calc(100% - 220px); */
 	margin:0;
 	padding-top: 0;
 }
+
+.Product > p img {
+  float: right;
+}
+
 .Product figure {
 	display: inline-block;
 	width:200px;

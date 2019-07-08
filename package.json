@@ -7,7 +7,7 @@
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.0"
+    "react-scripts": "^3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,5 +22,17 @@
     "https://reacttraining.com/react-router/web/example/custom-link",
     "https://github.com/ReactTraining/react-router/issues/4556",
     "https://termsfeed.com/terms-conditions/92f7823bf0fd4eea380a96491981ccb8"
-  ]
+  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
