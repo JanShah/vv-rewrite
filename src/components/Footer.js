@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import NavMenu from './NavMenu'
 import '../css/Footer.css'
 export default class extends Component {
